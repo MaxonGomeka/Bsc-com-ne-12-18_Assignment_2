@@ -1,1 +1,3 @@
-# Bsc-com-ne-12-18_Assignment_2
+ Maxon Gomeka
+ Bsc-com-ne-12-18
+ Assignment 2
