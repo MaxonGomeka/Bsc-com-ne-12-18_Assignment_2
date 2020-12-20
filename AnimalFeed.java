@@ -58,7 +58,7 @@ public class AnimalFeed{
     }
     //Get all the animal feed details
     public String getAnimaleFeed(){
-        String animalfeed = " You will use (kgs)"+ "\n "+"Maize : " +this.getMaizeKgs()+ "\n"+
+        String animalfeed = "You will use (kgs)"+ "\n"+"Maize : " +this.getMaizeKgs()+ "\n"+
                            "Soya : " + this.getSoya()+ "\n" + "GroundNuts: " +this.getGroundnuts()+"\n"+
                            "Salt: "+(this.getSalt())+ "\n" +"You will make "+this.getSum()+ "kg " +" of feed" ;
                   return animalfeed;
