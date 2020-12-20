@@ -1,9 +1,11 @@
 public class AnimalFeed{
+    //declaring variables
     private double maize;
     private double groundnuts;
     private double soya;
     private double salt;
 
+//Animal feed argument contructor
     AnimalFeed(double maize,double groundnuts,double soya, double salt){
         this.maize= maize;
         this.groundnuts= groundnuts;
@@ -12,25 +14,30 @@ public class AnimalFeed{
 
 
     }
+    //setter method for maize
     public void  setMaizeKgs(double maize){
         this.maize=  maize;
     }
+    //getter method for maize
     public  double getMaizeKgs(){
         double maizekgs = (0.6*maize);
         return maizekgs;
     }
-
+      //setter method for groundnuts
     public void setGroundnuts(double groundnuts){
         this.groundnuts= groundnuts;
     }
+      //getter method for mgroundnuts
     public  double getGroundnuts(){
         double gnutskgs = (0.15*groundnuts);
         return gnutskgs;
     }
-
+    
+    //setter method for soya
     public void setSoya(double soya){
         this.soya= soya;
     }
+  
     public  double getSoya(){
         double soyakgs = (0.2*soya);
         return soyakgs;
