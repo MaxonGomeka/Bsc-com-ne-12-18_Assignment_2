@@ -82,26 +82,41 @@ public  class AnimalFeedCalculator extends Application{
         primaryStage.show();
 
     }
+    //bierdePane method that contains a text
     private BorderPane getBorderPane(){
+    	//borderPane instance
         BorderPane borderPane = new BorderPane();
-
+        //creating a text intstance and adding font
         Text text = new Text(20, 20, "Enter Ingredients Amounts in Kilograms (Kg)");
         text.setFont(Font.font("New Times Roman", FontWeight.BOLD,
                 FontPosture.REGULAR, 12));
+        //adding text into borderPne
         borderPane.setTop(text);
         borderPane.setStyle("-fx-background-color: white");
         return  borderPane;
     }
+    //feed calculation method
     private void calculateAnimalFeed(){
-
+        //getting maize kgs entered by the user on text field
         double maize1 = Double.parseDouble(maizetextField.getText());
+
+        //getting groundnuts kgs entered by the user on text field
         double groundnuts1 = Double.parseDouble(groundNuttextFields.getText());
+
+        //getting soya kgs entered by the user on text field
         double soya1 = Double.parseDouble(soyatextField.getText());
+
+        //getting salt kgs entered by the user on text field
         double salt1 = Double.parseDouble(salttextField.getText());
+
+        //creating an instance for Animal feed class
         AnimalFeed animalFeed = new AnimalFeed(maize1,groundnuts1,soya1,salt1);
+
+        //setting the results on the Text Area
         resulttextArea.setText(animalFeed.getAnimaleFeed());
 
     }
+    //EventHandler interface class
     class CalculateHandler implements EventHandler<ActionEvent>{
         @Override
         public void handle(ActionEvent e){
