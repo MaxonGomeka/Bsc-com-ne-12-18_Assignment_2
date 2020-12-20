@@ -20,11 +20,11 @@ import javafx.event.ActionEvent;
 
 public  class AnimalFeedCalculator extends Application{
   //creating textFields
-     private TextField textFieldmaize = new TextField();
-     private TextField  textFieldsoya = new TextField();
-     private  TextField textFieldgroundNuts = new TextField();
-     private TextField textFieldsalt = new TextField();
-    private TextArea textAreaResult = new TextArea();
+     private TextField maizetextField = new TextField();
+     private TextField  soyatextField = new TextField();
+     private  TextField groundNuttextFields = new TextField();
+     private TextField salttextField = new TextField();
+    private TextArea resulttextArea = new TextArea();
      //overriding start method froma application class
     @Override
     public void start(Stage primaryStage){
@@ -38,10 +38,10 @@ public  class AnimalFeedCalculator extends Application{
         //registering a button to a handler
         calculate.setOnAction(calculateHandler);
         //setting all text fields to position bottom_center
-        textFieldmaize.setAlignment(Pos.BOTTOM_RIGHT);
-        textFieldsoya.setAlignment(Pos.BOTTOM_RIGHT);
-        textFieldgroundNuts.setAlignment(Pos.BOTTOM_RIGHT);
-        textFieldsalt.setAlignment(Pos.BOTTOM_RIGHT);
+        maizetextField.setAlignment(Pos.BOTTOM_RIGHT);
+        soyatextField.setAlignment(Pos.BOTTOM_RIGHT);
+        groundNuttextFields.setAlignment(Pos.BOTTOM_RIGHT);
+        salttextField.setAlignment(Pos.BOTTOM_RIGHT);
         //setting a background color for GridPane
         gridPane.setStyle("-fx-background-color: Aquamarine");
         //setting gaps between nodes
@@ -57,17 +57,18 @@ public  class AnimalFeedCalculator extends Application{
         gridPane.setPadding(new Insets(30,25,59,20));
         gridPane.add(getBorderPane(),1,0);
         gridPane.add(maize,0,1);
-        gridPane.add(textFieldmaize,1,1);
+        gridPane.add(maizetextField,1,1);
         gridPane.add(soya,0,3);
-        gridPane.add(textFieldsoya,1,3);
+        gridPane.add(soyatextField,1,3);
         gridPane.add(groundNuts,0,4);
-        gridPane.add(textFieldgroundNuts,1,4);
+        gridPane.add(groundNuttextFields,1,4);
         gridPane.add(salt,0,5);
-        gridPane.add(textFieldsalt,1,5);
+        gridPane.add(salttextField,1,5);
         gridPane.add(calculate,1,7);
-        gridPane.add(textAreaResult,1,10);
-        textAreaResult.setMaxSize(200,200);
-        textAreaResult.setStyle("-fx-border: inset");
+        gridPane.add(resulttextArea,1,10);
+        resulttextArea.setMaxSize(270,200);
+        resulttextArea.setStyle("-fx-border: inset");
+
 
         ///creating a scene
         Scene scene = new Scene(gridPane,400,500);
@@ -88,12 +89,13 @@ public  class AnimalFeedCalculator extends Application{
     }
     private void calculateAnimalFeed(){
 
-        double maize1 = Double.parseDouble(textFieldmaize.getText());
-        double groundnuts1 = Double.parseDouble(textFieldgroundNuts.getText());
-        double soya1 = Double.parseDouble(textFieldsoya.getText());
-        double salt1 = Double.parseDouble(textFieldsalt.getText());
+        double maize1 = Double.parseDouble(maizetextField.getText());
+        double groundnuts1 = Double.parseDouble(groundNuttextFields.getText());
+        double soya1 = Double.parseDouble(soyatextField.getText());
+        double salt1 = Double.parseDouble(salttextField.getText());
         AnimalFeed animalFeed = new AnimalFeed(maize1,groundnuts1,soya1,salt1);
-        textAreaResult.setText(animalFeed.getAnimaleFeed());
+        resulttextArea.setText(animalFeed.getAnimaleFeed());
+
     }
     class CalculateHandler implements EventHandler<ActionEvent>{
         @Override
