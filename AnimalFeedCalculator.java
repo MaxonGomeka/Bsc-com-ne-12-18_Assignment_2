@@ -55,6 +55,7 @@ public  class AnimalFeedCalculator extends Application{
         Label groundNuts = new Label("Groundnuts");
         Label salt = new Label("Salt");
         gridPane.setPadding(new Insets(30,25,59,20));
+        //adding nodes into the gridPane
         gridPane.add(getBorderPane(),1,0);
         gridPane.add(maize,0,1);
         gridPane.add(maizetextField,1,1);
@@ -66,14 +67,18 @@ public  class AnimalFeedCalculator extends Application{
         gridPane.add(salttextField,1,5);
         gridPane.add(calculate,1,7);
         gridPane.add(resulttextArea,1,10);
+        //setting size of the Text Area
         resulttextArea.setMaxSize(270,200);
         resulttextArea.setStyle("-fx-border: inset");
 
 
         ///creating a scene
         Scene scene = new Scene(gridPane,400,500);
+        //setting stage title
         primaryStage.setTitle("Animal Feed Calculator");
+        //adding scene into a stage
         primaryStage.setScene(scene);
+        //display a stage
         primaryStage.show();
 
     }
