@@ -32,6 +32,7 @@ public  class AnimalFeedCalculator extends Application{
         GridPane gridPane = new GridPane();
         //creating calculation button
         Button calculate = new Button("Calculate");
+
         calculate.setMaxWidth(100);
         //Instance handler
         CalculateHandler calculateHandler = new  CalculateHandler();
