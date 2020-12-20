@@ -56,7 +56,7 @@ public class AnimalFeed{
         double sum = getMaizeKgs() + getGroundnuts() + getSalt() + getSoya() ;
         return sum;
     }
-    //Getting all the animal feed details
+    //Get all the animal feed details
     public String getAnimaleFeed(){
         String animalfeed = " You will use (kgs)"+ "\n "+"Maize : " +this.getMaizeKgs()+ "\n"+
                            "Soya : " + this.getSoya()+ "\n" + "GroundNuts: " +this.getGroundnuts()+"\n"+
