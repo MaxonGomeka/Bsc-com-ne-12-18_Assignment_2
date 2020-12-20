@@ -24,7 +24,7 @@ public  class AnimalFeedCalculator extends Application{
      private TextField  soyatextField = new TextField();
      private  TextField groundNuttextFields = new TextField();
      private TextField salttextField = new TextField();
-    private TextArea resulttextArea = new TextArea();
+     private TextArea resulttextArea = new TextArea();
      //overriding start method froma application class
     @Override
     public void start(Stage primaryStage){
