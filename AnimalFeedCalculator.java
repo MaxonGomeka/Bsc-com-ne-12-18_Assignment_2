@@ -110,7 +110,7 @@ public  class AnimalFeedCalculator extends Application{
         double salt1 = Double.parseDouble(salttextField.getText());
 
         //creating an instance for Animal feed class
-        AnimalFeed animalFeed = new AnimalFeed(maize1,groundnuts1,soya1,salt1);
+        AnimalFeeds animalFeed = new AnimalFeed(maize1,groundnuts1,soya1,salt1);
 
         //setting the results on the Text Area
         resulttextArea.setText(animalFeed.getAnimalFeedResults());
