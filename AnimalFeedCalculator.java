@@ -98,19 +98,19 @@ public  class AnimalFeedCalculator extends Application{
     //feed calculation method
     private void calculateAnimalFeed(){
         //getting maize kgs entered by the user on text field
-        double maize1 = Double.parseDouble(maizetextField.getText());
+        double maizekgs = Double.parseDouble(maizetextField.getText());
 
         //getting groundnuts kgs entered by the user on text field
-        double groundnuts1 = Double.parseDouble(groundNuttextFields.getText());
+        double groundnutskgs = Double.parseDouble(groundNuttextFields.getText());
 
         //getting soya kgs entered by the user on text field
-        double soya1 = Double.parseDouble(soyatextField.getText());
+        double soyakgs = Double.parseDouble(soyatextField.getText());
 
         //getting salt kgs entered by the user on text field
-        double salt1 = Double.parseDouble(salttextField.getText());
+        double saltkgs = Double.parseDouble(salttextField.getText());
 
         //creating an instance for Animal feed class
-        AnimalFeeds animalFeed = new AnimalFeed(maize1,groundnuts1,soya1,salt1);
+        AnimalFeeds animalFeed = new AnimalFeed(maizekgs,groundnutskgs,soyakgs,saltkgs);
 
         //setting the results on the Text Area
         resulttextArea.setText(animalFeed.getAnimalFeedResults());
