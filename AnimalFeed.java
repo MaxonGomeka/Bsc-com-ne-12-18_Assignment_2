@@ -1,4 +1,5 @@
-public class AnimalFeed{
+
+public class AnimalFeed extends AnimalFeeds{
     //declaring variables
     private double maize;
     private double groundnuts;
@@ -52,11 +53,13 @@ public class AnimalFeed{
         return saltkgs;
     }
     //Adding method that get the total kgs to be used
+    @Override
     public double getSum(){
         double sum = getMaizeKgs() + getGroundnuts() + getSalt() + getSoya() ;
         return sum;
     }
     //Get all the animal feed details
+    @Override
     public String getAnimaleFeed(){
         String animalfeed = "You will use (kgs)"+ "\n"+"Maize : " +this.getMaizeKgs()+ "\n"+
                            "Soya : " + this.getSoya()+ "\n" + "GroundNuts: " +this.getGroundnuts()+"\n"+
