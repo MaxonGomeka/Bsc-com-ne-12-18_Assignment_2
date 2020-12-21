@@ -113,7 +113,7 @@ public  class AnimalFeedCalculator extends Application{
         AnimalFeed animalFeed = new AnimalFeed(maize1,groundnuts1,soya1,salt1);
 
         //setting the results on the Text Area
-        resulttextArea.setText(animalFeed.getAnimaleFeed());
+        resulttextArea.setText(animalFeed.getAnimalFeedResults());
 
     }
     //EventHandler interface class

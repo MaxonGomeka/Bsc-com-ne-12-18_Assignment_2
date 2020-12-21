@@ -60,7 +60,7 @@ public class AnimalFeed extends AnimalFeeds{
     }
     //Get all the animal feed details
     @Override
-    public String getAnimaleFeed(){
+    public String getAnimalFeedResults(){
         String animalfeed = "You will use (kgs)"+ "\n"+"Maize : " +this.getMaizeKgs()+ "\n"+
                            "Soya : " + this.getSoya()+ "\n" + "GroundNuts: " +this.getGroundnuts()+"\n"+
                            "Salt: "+(this.getSalt())+ "\n" +"You will make "+this.getSum()+ "kg " +" of feed" ;

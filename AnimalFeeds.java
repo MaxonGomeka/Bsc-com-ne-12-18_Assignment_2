@@ -1,4 +1,4 @@
 public abstract class  AnimalFeeds{
     public abstract double getSum();
-    public  abstract  String getAnimaleFeed();
+    public  abstract  String getAnimalFeedResults();
 }
