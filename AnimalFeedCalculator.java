@@ -118,6 +118,7 @@ public  class AnimalFeedCalculator extends Application{
     }
     //EventHandler interface class
     class CalculateHandler implements EventHandler<ActionEvent>{
+    	//Overriding a handle method
         @Override
         public void handle(ActionEvent e){
             calculateAnimalFeed();
