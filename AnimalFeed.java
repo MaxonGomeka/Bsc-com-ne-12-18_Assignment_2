@@ -63,8 +63,12 @@ public class AnimalFeed extends AnimalFeeds{
     public String getAnimalFeedResults(){
         String animalfeed = "You will use (kgs)"+ "\n"+"Maize : " +this.getMaizeKgs()+ "\n"+
                            "Soya : " + this.getSoya()+ "\n" + "GroundNuts: " +this.getGroundnuts()+"\n"+
-                           "Salt: "+(this.getSalt())+ "\n" +"You will make "+this.getTotalSum()+ "kg " +" of feed" ;
-                  return animalfeed;
+                           "Salt: "+(this.getSalt())+ "\n" +"You will make "+this.getTotalSum()+ "kg " +" of feed" +"\n"+ "\n"+
+                           "Enter Igredient Amounts again if you want to" +"\n"+ 
+                            "make the same or another calculation!!!" ;
+                  
+
+        return animalfeed;
 
     }
 

@@ -52,7 +52,7 @@ public  class AnimalFeedCalculator extends Application{
         //placing gridPane at the top center
         gridPane.setAlignment(Pos.TOP_CENTER);
         //setting padding
-        gridPane.setPadding(new Insets(30,25,59,20));
+        gridPane.setPadding(new Insets(30,25,59,1));
         //making labels
         Label maize = new Label("Maize");
         maize.setStyle("-fx-text-fill: white;");
@@ -84,7 +84,7 @@ public  class AnimalFeedCalculator extends Application{
 
 
         ///creating a scene
-        Scene scene = new Scene(gridPane,400,500);
+        Scene scene = new Scene(gridPane,420,500);
         //setting stage title
         primaryStage.setTitle("Animal Feed Calculator");
         //adding scene into a stage
