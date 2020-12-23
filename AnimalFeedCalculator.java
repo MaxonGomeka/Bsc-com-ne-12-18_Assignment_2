@@ -28,33 +28,44 @@ public  class AnimalFeedCalculator extends Application{
      //overriding start method froma application class
     @Override
     public void start(Stage primaryStage){
-        //creating gridPane
-        GridPane gridPane = new GridPane();
-        //creating calculation button
-        Button calculate = new Button("Calculate");
-        calculate.setMaxWidth(100);
-        //Instance handler
-        CalculateHandler calculateHandler = new  CalculateHandler();
-        //registering a button to a handler
-        calculate.setOnAction(calculateHandler);
-        //setting all text fields to position bottom_center
+    	//setting all text fields to position bottom_center
         maizetextField.setAlignment(Pos.BOTTOM_RIGHT);
         soyatextField.setAlignment(Pos.BOTTOM_RIGHT);
         groundNuttextFields.setAlignment(Pos.BOTTOM_RIGHT);
         salttextField.setAlignment(Pos.BOTTOM_RIGHT);
+        //creating gridPane
+        GridPane gridPane = new GridPane();
+        //creating calculation button
+        Button calculate = new Button("Calculate");
+        calculate.setStyle("-fx-background-radius: 20; -fx-background-color:red; -fx-text-fill: white;");
+        calculate.setMaxWidth(85);
+        //Instance handler
+        CalculateHandler calculateHandler = new  CalculateHandler();
+        //registering a button to a handler
+        calculate.setOnAction(calculateHandler);
+      
         //setting a background color for GridPane
-        gridPane.setStyle("-fx-background-color: Aquamarine");
+        gridPane.setStyle("-fx-background-color: Teal");
         //setting gaps between nodes
         gridPane.setHgap(6);
         gridPane.setVgap(6);
         //placing gridPane at the top center
         gridPane.setAlignment(Pos.TOP_CENTER);
+        //setting padding
+        gridPane.setPadding(new Insets(30,25,59,20));
         //making labels
         Label maize = new Label("Maize");
+        maize.setStyle("-fx-text-fill: white;");
+
         Label soya = new Label("Soya");
+        soya.setStyle("-fx-text-fill: white;");
+
         Label groundNuts = new Label("Groundnuts");
+        groundNuts.setStyle("-fx-text-fill: white;");
+
         Label salt = new Label("Salt");
-        gridPane.setPadding(new Insets(30,25,59,20));
+        salt.setStyle("-fx-text-fill: white;");
+      
         //adding nodes into the gridPane
         gridPane.add(getBorderPane(),1,0);
         gridPane.add(maize,0,1);
@@ -68,7 +79,7 @@ public  class AnimalFeedCalculator extends Application{
         gridPane.add(calculate,1,7);
         gridPane.add(resulttextArea,1,10);
         //setting size of the Text Area
-        resulttextArea.setMaxSize(270,200);
+        resulttextArea.setMaxSize(300,400);
         resulttextArea.setStyle("-fx-border: inset");
 
 
