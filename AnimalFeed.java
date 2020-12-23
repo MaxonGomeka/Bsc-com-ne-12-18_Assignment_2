@@ -54,7 +54,7 @@ public class AnimalFeed extends AnimalFeeds{
     }
     //Adding method that get the total kgs to be used
     @Override
-    public double getSum(){
+    public double getTotalSum(){
         double sum = getMaizeKgs() + getGroundnuts() + getSalt() + getSoya() ;
         return sum;
     }
@@ -63,7 +63,7 @@ public class AnimalFeed extends AnimalFeeds{
     public String getAnimalFeedResults(){
         String animalfeed = "You will use (kgs)"+ "\n"+"Maize : " +this.getMaizeKgs()+ "\n"+
                            "Soya : " + this.getSoya()+ "\n" + "GroundNuts: " +this.getGroundnuts()+"\n"+
-                           "Salt: "+(this.getSalt())+ "\n" +"You will make "+this.getSum()+ "kg " +" of feed" ;
+                           "Salt: "+(this.getSalt())+ "\n" +"You will make "+this.getTotalSum()+ "kg " +" of feed" ;
                   return animalfeed;
 
     }
